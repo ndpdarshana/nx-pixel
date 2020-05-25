@@ -4,23 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-/**
- * Material components
- */
-import { MatSliderModule } from '@angular/material/slider';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-
-import { ToolbarComponent } from './common/toolbar/toolbar.component';
+import { DefaultModule } from './layouts/default/default.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, ToolbarComponent],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule, 
     BrowserAnimationsModule,
-    MatSliderModule,
-    MatToolbarModule,
-    MatIconModule
+    DefaultModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'pixels-toolbar',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  @Output() toggleSidenav: EventEmitter<any> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSidebar(){
+    this.toggleSidenav.emit();
   }
 
 }
