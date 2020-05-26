@@ -6,19 +6,19 @@ import { SharedModule } from '../../shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from '../../modules/dashboard/dashboard.component';
-import { PostsComponent } from '../../modules/posts/posts.component';
+import { HrModule } from '../../modules/hr/hr.module';
 
 @NgModule({
   declarations: [
     DefaultComponent,
     DashboardComponent,
-    PostsComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     MatSidenavModule,
     RouterModule,
+    HrModule
   ]
 })
 export class DefaultModule { }
