@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 
 import { AddUserDialogBoxComponent } from './add-user-dialog-box/add-user-dialog-box.component'
+import { User } from './user.model';
 
 @Component({
   selector: 'pixels-users',
@@ -10,8 +11,7 @@ import { AddUserDialogBoxComponent } from './add-user-dialog-box/add-user-dialog
 })
 export class UsersComponent implements OnInit {
 
-  animal: string;
-  name: string;
+  newUser:User = null;
 
   constructor(public dialog: MatDialog) { }
 
@@ -19,14 +19,15 @@ export class UsersComponent implements OnInit {
   }
 
   openAddUserDialog(): void {
+    this.newUser = new User()
     const dialogRef = this.dialog.open(AddUserDialogBoxComponent, {
       width: '250px',
-      data: {name: this.name, animal: this.animal}
+      data: this.newUser
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      console.log(result);
     });
   }
 }

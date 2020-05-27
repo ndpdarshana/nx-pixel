@@ -6,10 +6,14 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Email</mat-label>
-    <input matInput [(ngModel)]="data.name">
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" matInput [(ngModel)]="data.password">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button color="primary" (click)="onNoClick()">Add</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Cancel</button>
+  <button mat-raised-button (click)="onNoClick()" cdkFocusInitial>Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="data" color="primary">Add</button>
 </div>

@@ -1,10 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { User } from '../user.model';
 
 @Component({
   selector: 'pixels-add-user-dialog-box',
@@ -13,11 +9,8 @@ export interface DialogData {
 })
 export class AddUserDialogBoxComponent{
 
-  animal: string;
-  name: string;
-
   constructor(public dialogRef: MatDialogRef<AddUserDialogBoxComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+    @Inject(MAT_DIALOG_DATA) public data: User) { }
 
   onNoClick(): void {
     this.dialogRef.close();
