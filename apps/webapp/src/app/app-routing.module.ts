@@ -4,6 +4,7 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HrComponent } from './modules/hr/hr.component';
 import { UsersComponent } from './modules/hr/administration/users/users.component';
+import { MaintenanceComponent } from './modules/hr/administration/users/maintenance/maintenance.component';
 
 const routes: Routes = [{
   path: '',
@@ -17,6 +18,9 @@ const routes: Routes = [{
     children: [{
       path: 'admin/users',
       component: UsersComponent
+    }, {
+      path: 'admin/maintenance',
+      component: MaintenanceComponent
     }]
   }]
 }]

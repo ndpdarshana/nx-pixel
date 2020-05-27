@@ -6,9 +6,15 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { HrComponent } from '../../modules/hr/hr.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -17,6 +23,7 @@ import { AdministrationComponent } from './administration/administration.compone
 import { UsersComponent } from './administration/users/users.component';
 import { MaintenanceComponent } from './administration/users/maintenance/maintenance.component';
 import { UserTableComponent } from './administration/users/user-table/user-table.component';
+import { AddUserDialogBoxComponent } from './administration/users/add-user-dialog-box/add-user-dialog-box.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,8 @@ import { UserTableComponent } from './administration/users/user-table/user-table
     AdministrationComponent,
     UsersComponent,
     MaintenanceComponent,
-    UserTableComponent
+    UserTableComponent,
+    AddUserDialogBoxComponent
   ],
   imports: [
     CommonModule,
@@ -37,6 +45,12 @@ import { UserTableComponent } from './administration/users/user-table/user-table
     RouterModule,
     MatPaginatorModule,
     MatSortModule,
+    MatIconModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   exports:[
     HrComponent
