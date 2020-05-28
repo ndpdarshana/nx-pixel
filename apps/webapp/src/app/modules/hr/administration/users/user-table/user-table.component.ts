@@ -15,6 +15,7 @@ export class UserTableComponent implements AfterViewInit, OnInit, OnChanges{
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<User>;
+  // TODO Use custom datasource instead od MatTableDatasource
   // dataSource: UserTableDataSource;
   dataSource: MatTableDataSource<User>;
 
@@ -30,6 +31,7 @@ export class UserTableComponent implements AfterViewInit, OnInit, OnChanges{
   }
 
   ngAfterViewInit() {
+    // KNOWN ISSUE: New data rows are not affected by sorting alogorithm
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
