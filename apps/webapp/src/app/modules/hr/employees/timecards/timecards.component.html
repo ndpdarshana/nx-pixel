@@ -1,1 +1,9 @@
-<p>timecards works!</p>
+<div fxLayout="column" fxLayoutAlign="space-between none" fxLayoutGap="10px">
+  <div fxLayout="row">
+    <button mat-raised-button color="primary" (click)="openAddTimecardDialog()">
+      Add Time Card
+    </button>
+  </div>
+  
+  <pixels-timecard-table [timecards]="timecards"></pixels-timecard-table>
+</div>

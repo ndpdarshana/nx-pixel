@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 import { AddUserDialogBoxComponent } from './add-user-dialog-box/add-user-dialog-box.component'
 import { User } from './user.model';

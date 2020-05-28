@@ -24,6 +24,8 @@ import { UsersComponent } from './administration/users/users.component';
 import { MaintenanceComponent } from './administration/users/maintenance/maintenance.component';
 import { UserTableComponent } from './administration/users/user-table/user-table.component';
 import { AddUserDialogBoxComponent } from './administration/users/add-user-dialog-box/add-user-dialog-box.component';
+import { TimecardTableComponent } from './employees/timecards/timecard-table/timecard-table.component';
+import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecard-dialog-box/add-timecard-dialog-box.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { AddUserDialogBoxComponent } from './administration/users/add-user-dialo
     UsersComponent,
     MaintenanceComponent,
     UserTableComponent,
-    AddUserDialogBoxComponent
+    AddUserDialogBoxComponent,
+    TimecardTableComponent,
+    AddTimecardDialogBoxComponent
   ],
   imports: [
     CommonModule,

@@ -5,6 +5,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { HrComponent } from './modules/hr/hr.component';
 import { UsersComponent } from './modules/hr/administration/users/users.component';
 import { MaintenanceComponent } from './modules/hr/administration/users/maintenance/maintenance.component';
+import { TimecardsComponent } from './modules/hr/employees/timecards/timecards.component';
 
 const routes: Routes = [{
   path: '',
@@ -21,6 +22,9 @@ const routes: Routes = [{
     }, {
       path: 'admin/maintenance',
       component: MaintenanceComponent
+    }, {
+      path: 'employee/timecard',
+      component: TimecardsComponent
     }]
   }]
 }]
