@@ -12,6 +12,11 @@ import { User } from './user.model';
 export class UsersComponent implements OnInit {
 
   newUser:User = null;
+  users: User[] = [
+    {id: 1, name: 'Hydrogen', email:'hydrogen@pixels.com', password:""},
+    {id: 2, name: 'Helium', email:'helium@pixels.com', password:""},
+    {id: 3, name: 'Lithium', email:'lithium@pixels.com', password:""},
+  ];
 
   constructor(public dialog: MatDialog) { }
 
@@ -26,8 +31,7 @@ export class UsersComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(result);
+      this.users = [...this.users, this.newUser];
     });
   }
 }

@@ -5,20 +5,13 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import { User } from '../user.model';
 
-// TODO: replace this with real data from your application
-const EXAMPLE_DATA: User[] = [
-  {id: 1, name: 'Hydrogen', email:'hydrogen@pixels.com', password:""},
-  {id: 2, name: 'Helium', email:'helium@pixels.com', password:""},
-  {id: 3, name: 'Lithium', email:'lithium@pixels.com', password:""},
-];
-
 /**
  * Data source for the UserTable view. This class should
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
 export class UserTableDataSource extends DataSource<User> {
-  data: User[] = EXAMPLE_DATA;
+  data: User[];
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -77,6 +70,10 @@ export class UserTableDataSource extends DataSource<User> {
         default: return 0;
       }
     });
+  }
+
+  public setDatasource(users:User[]){
+    this.data = users;
   }
 }
 
