@@ -7,6 +7,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from '../../modules/dashboard/dashboard.component';
 import { HrModule } from '../../modules/hr/hr.module';
+import { FinanceModule } from '../../modules/finance/finance.module';
+import { InventoryModule } from '../../modules/inventory/inventory.module';
+import { ProjectModule } from '../../modules/project/project.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HrModule } from '../../modules/hr/hr.module';
     SharedModule,
     MatSidenavModule,
     RouterModule,
-    HrModule
+    HrModule,
+    FinanceModule,
+    InventoryModule,
+    ProjectModule
   ]
 })
 export class DefaultModule { }
