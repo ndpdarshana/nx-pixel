@@ -9,6 +9,8 @@ import { TimecardsComponent } from './modules/hr/employees/timecards/timecards.c
 import { InventoryComponent } from './modules/inventory/inventory.component';
 import { FinanceComponent } from './modules/finance/finance.component';
 import { ProjectComponent } from './modules/project/project.component';
+import { LeavesAbsencesComponent } from './modules/hr/employees/leaves-absences/leaves-absences.component';
+import { PaymentsComponent } from './modules/hr/employees/payments/payments.component';
 
 const routes: Routes = [{
   path: '',
@@ -28,6 +30,12 @@ const routes: Routes = [{
     }, {
       path: 'employee/timecard',
       component: TimecardsComponent
+    }, {
+      path: 'employee/leaves',
+      component: LeavesAbsencesComponent
+    }, {
+      path: 'employee/payments',
+      component: PaymentsComponent
     }]
   }, {
     path: 'inventory',

@@ -28,6 +28,9 @@ import { UserTableComponent } from './administration/users/user-table/user-table
 import { AddUserDialogBoxComponent } from './administration/users/add-user-dialog-box/add-user-dialog-box.component';
 import { TimecardTableComponent } from './employees/timecards/timecard-table/timecard-table.component';
 import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecard-dialog-box/add-timecard-dialog-box.component';
+import { LeavesAbsencesComponent } from './employees/leaves-absences/leaves-absences.component';
+import { PaymentsComponent } from './employees/payments/payments.component';
+import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves-absences-table/leaves-absences-table.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecar
     UserTableComponent,
     AddUserDialogBoxComponent,
     TimecardTableComponent,
-    AddTimecardDialogBoxComponent
+    AddTimecardDialogBoxComponent,
+    LeavesAbsencesComponent,
+    PaymentsComponent,
+    LeavesAbsencesTableComponent
   ],
   imports: [
     CommonModule,
