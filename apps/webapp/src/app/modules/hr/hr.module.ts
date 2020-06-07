@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
@@ -54,6 +55,7 @@ import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecar
     MatDialogModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCheckboxModule,
     FormsModule
   ],
   exports:[

@@ -1,7 +1,10 @@
 <div fxLayout="column" fxLayoutAlign="space-between none" fxLayoutGap="10px">
-  <div fxLayout="row">
+  <div fxLayout="row" fxLayoutGap="10px">
     <button mat-raised-button color="primary" aria-label="Add new user" (click)="openAddUserDialog()">
       Add user
+    </button>  
+    <button mat-raised-button color="accent" aria-label="Delete users" (click)="openAddUserDialog()">
+      Delete selected users
     </button>  
   </div>
   <pixels-user-table [users]="users"></pixels-user-table>
