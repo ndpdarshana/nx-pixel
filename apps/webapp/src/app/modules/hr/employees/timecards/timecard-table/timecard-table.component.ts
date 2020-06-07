@@ -12,7 +12,7 @@ export class TimecardTableComponent implements OnInit, AfterViewInit{
 
   dataSource: MatTableDataSource<Timecard>;
 
-  displayedColumns = ['id', 'project', 'dateIn', 'timeIn', 'timeOut', 'comment']
+  displayedColumns = ['id', 'project', 'dateIn', 'timeIn', 'timeOut', 'comment', 'actions']
 
   @Input() timecards: Timecard[];
 
