@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Payslip } from './payslip.model';
+import { Payslip } from '../../../../models/payslip.model';
 import { DatePipe } from '@angular/common';
 
 @Component({

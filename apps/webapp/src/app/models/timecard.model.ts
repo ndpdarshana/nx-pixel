@@ -1,4 +1,4 @@
-import { User } from '../../administration/users/user.model';
+import { User } from './user.model';
 
 export class Timecard{
   public id:number;

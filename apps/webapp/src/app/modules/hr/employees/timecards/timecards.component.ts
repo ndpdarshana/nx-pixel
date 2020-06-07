@@ -3,7 +3,7 @@ import { DatePipe } from '@angular/common';
 
 import { AddTimecardDialogBoxComponent } from './add-timecard-dialog-box/add-timecard-dialog-box.component';
 import { MatDialog } from '@angular/material/dialog';
-import { Timecard } from './timecard.model';
+import { Timecard } from '../../../../models/timecard.model';
 
 @Component({
   selector: 'pixels-timecards',

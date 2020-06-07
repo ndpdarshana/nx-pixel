@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { UserTableDataSource } from './user-table-datasource';
-import { User } from '../user.model';
+import { User } from '../../../../../models/user.model';
 import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({

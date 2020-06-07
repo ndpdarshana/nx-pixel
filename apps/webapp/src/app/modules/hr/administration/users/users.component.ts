@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { AddUserDialogBoxComponent } from './add-user-dialog-box/add-user-dialog-box.component'
-import { User } from './user.model';
+import { User } from '../../../../models/user.model';
 
 @Component({
   selector: 'pixels-users',

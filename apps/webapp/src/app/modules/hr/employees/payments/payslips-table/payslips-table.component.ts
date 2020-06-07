@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { Payslip } from '../payslip.model';
+import { Payslip } from '../../../../../models/payslip.model';
 
 @Component({
   selector: 'pixels-payslips-table',

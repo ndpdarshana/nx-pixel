@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Timecard } from '../timecard.model';
+import { Timecard } from '../../../../../models/timecard.model';
 
 @Component({
   selector: 'pixels-add-timecard-dialog-box',

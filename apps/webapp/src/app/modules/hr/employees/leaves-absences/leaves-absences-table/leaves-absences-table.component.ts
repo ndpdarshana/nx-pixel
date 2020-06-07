@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
-import { LeaveAbsence } from '../leave-absence.model';
+import { LeaveAbsence } from '../../../../../models/leave-absence.model';
 import { MatTableDataSource, MatTable } from '@angular/material/table';
 
 @Component({

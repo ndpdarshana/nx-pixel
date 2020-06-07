@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LeaveAbsence } from './leave-absence.model';
+import { LeaveAbsence } from '../../../../models/leave-absence.model';
 import { DatePipe } from '@angular/common';
 
 @Component({

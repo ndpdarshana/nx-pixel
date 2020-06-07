@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { Timecard } from '../timecard.model';
+import { Timecard } from '../../../../../models/timecard.model';
 
 @Component({
   selector: 'pixels-timecard-table',
