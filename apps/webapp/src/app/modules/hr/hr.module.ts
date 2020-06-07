@@ -16,6 +16,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 import { HrComponent } from '../../modules/hr/hr.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -57,6 +58,9 @@ import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecar
     MatFormFieldModule,
     MatCheckboxModule,
     FormsModule
+  ],
+  providers: [
+    DatePipe
   ],
   exports:[
     HrComponent

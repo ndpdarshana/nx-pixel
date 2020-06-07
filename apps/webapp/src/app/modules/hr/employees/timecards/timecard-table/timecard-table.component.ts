@@ -5,13 +5,14 @@ import { Timecard } from '../timecard.model';
 @Component({
   selector: 'pixels-timecard-table',
   templateUrl: './timecard-table.component.html',
+  styleUrls: ['./timecard-table.component.scss']
 })
 export class TimecardTableComponent implements OnInit, AfterViewInit{
   @ViewChild(MatTable) table: MatTable<Timecard>;
 
   dataSource: MatTableDataSource<Timecard>;
 
-  displayedColumns = ['id', 'project', 'date']
+  displayedColumns = ['id', 'project', 'dateIn', 'timeIn', 'timeOut', 'comment']
 
   @Input() timecards: Timecard[];
 

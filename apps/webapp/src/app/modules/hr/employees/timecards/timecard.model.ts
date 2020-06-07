@@ -2,8 +2,10 @@ import { User } from '../../administration/users/user.model';
 
 export class Timecard{
   public id:number;
-  public date:Date;
-  // public time:string;
-  public project:string;
+  public dateIn: string;
+  public timeIn: string;
+  public timeOut: string;
+  public project: string;
+  public comment: string;
   // public user:User;
 }
