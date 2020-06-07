@@ -11,6 +11,7 @@ import { FinanceComponent } from './modules/finance/finance.component';
 import { ProjectComponent } from './modules/project/project.component';
 import { LeavesAbsencesComponent } from './modules/hr/employees/leaves-absences/leaves-absences.component';
 import { PaymentsComponent } from './modules/hr/employees/payments/payments.component';
+import { InventoryMgmtComponent } from './modules/inventory/inventory-mgmt/inventory-mgmt.component';
 
 const routes: Routes = [{
   path: '',
@@ -39,7 +40,14 @@ const routes: Routes = [{
     }]
   }, {
     path: 'inventory',
-    component: InventoryComponent
+    component: InventoryComponent,
+    children: [{
+      path: 'inventoryMgmt',
+      component: InventoryMgmtComponent
+    }, {
+      path: 'maintenance',
+      component: MaintenanceComponent
+    }]
   }, {
     path: 'finance',
     component: FinanceComponent
