@@ -31,6 +31,7 @@ import { AddTimecardDialogBoxComponent } from './employees/timecards/add-timecar
 import { LeavesAbsencesComponent } from './employees/leaves-absences/leaves-absences.component';
 import { PaymentsComponent } from './employees/payments/payments.component';
 import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves-absences-table/leaves-absences-table.component';
+import { PayslipsTableComponent } from './employees/payments/payslips-table/payslips-table.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves
     AddTimecardDialogBoxComponent,
     LeavesAbsencesComponent,
     PaymentsComponent,
-    LeavesAbsencesTableComponent
+    LeavesAbsencesTableComponent,
+    PayslipsTableComponent
   ],
   imports: [
     CommonModule,
