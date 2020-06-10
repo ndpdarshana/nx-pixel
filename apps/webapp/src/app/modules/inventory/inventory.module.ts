@@ -10,6 +10,7 @@ import { InventoryMgmtTableComponent } from './inventory-mgmt/inventory-mgmt-tab
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatTableModule,
     MatButtonModule,
+    MatCheckboxModule,
     RouterModule,
     FlexLayoutModule
   ],
