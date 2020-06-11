@@ -12,6 +12,10 @@ import { ProjectComponent } from './modules/project/project.component';
 import { LeavesAbsencesComponent } from './modules/hr/employees/leaves-absences/leaves-absences.component';
 import { PaymentsComponent } from './modules/hr/employees/payments/payments.component';
 import { InventoryMgmtComponent } from './modules/inventory/inventory-mgmt/inventory-mgmt.component';
+import { InvoicesComponent } from './modules/finance/invoices/invoices.component';
+import { AccountInfoComponent } from './modules/finance/account-info/account-info.component';
+import { BalanceConsolComponent } from './modules/finance/balance-consol/balance-consol.component';
+import { PurchaseOrdersComponent } from './modules/finance/purchase-orders/purchase-orders.component';
 
 const routes: Routes = [{
   path: '',
@@ -50,7 +54,20 @@ const routes: Routes = [{
     }]
   }, {
     path: 'finance',
-    component: FinanceComponent
+    component: FinanceComponent,
+    children: [{
+      path: 'invoices',
+      component: InvoicesComponent
+    }, {
+      path: 'accountInfo',
+      component: AccountInfoComponent
+    }, {
+      path: 'balanceConsol',
+      component: BalanceConsolComponent
+    }, {
+      path: 'purchaseOrders',
+      component: PurchaseOrdersComponent
+    }]
   }, {
     path: 'project',
     component: ProjectComponent

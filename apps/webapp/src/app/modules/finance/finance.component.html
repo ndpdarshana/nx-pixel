@@ -1,1 +1,23 @@
-<p>finance works!</p>
+<div fxLayout="column" fxLayoutGap="10px">
+  <header fxLayout="row">
+    <h2>Finance Management</h2>
+  </header>
+  
+  <div class="container" fxLayout="row" fxFlex=100 fxLayoutGap=20px>
+    <mat-card fxFlex="25" routerLink="/finance/invoices">
+      Tax Invoices
+    </mat-card>
+    <mat-card fxFlex="25" routerLink="/finance/accountInfo">
+      Account Informations
+    </mat-card>
+    <mat-card fxFlex="25" routerLink="/finance/balanceConsol">
+      Balance Consolidation
+    </mat-card>
+    <mat-card fxFlex="25" routerLink="/finance/purchaseOrders">
+      Purchase Orders
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+  <router-outlet></router-outlet>  
+</div>
