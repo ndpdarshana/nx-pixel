@@ -9,6 +9,11 @@ import { InvoicesComponent } from './invoices/invoices.component';
 import { AccountInfoComponent } from './account-info/account-info.component';
 import { BalanceConsolComponent } from './balance-consol/balance-consol.component';
 import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.component';
+import { InvoicesTableComponent } from './invoices/invoices-table/invoices-table.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -18,12 +23,17 @@ import { PurchaseOrdersComponent } from './purchase-orders/purchase-orders.compo
     InvoicesComponent,
     AccountInfoComponent,
     BalanceConsolComponent,
-    PurchaseOrdersComponent
+    PurchaseOrdersComponent,
+    InvoicesTableComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
     MatDividerModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatCheckboxModule,
     RouterModule,
     FlexLayoutModule
   ],

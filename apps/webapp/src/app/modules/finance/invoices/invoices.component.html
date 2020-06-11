@@ -1,1 +1,14 @@
-<p>invoices works!</p>
+<div fxLayout="column" fxLayoutAlign="space-between none" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <button mat-raised-button color="primary" aria-label="Add new user">
+      Create Invoice
+    </button>  
+    <button mat-raised-button color="accent" aria-label="Delete users">
+      Delete Selected Invoice
+    </button> 
+    <button mat-raised-button color="warn" aria-label="Delete users">
+      <mat-icon>alarm_add</mat-icon>Remind Selected Invoice
+    </button>   
+  </div>
+  <pixels-invoices-table [invoices]="invoices"></pixels-invoices-table>
+</div>
