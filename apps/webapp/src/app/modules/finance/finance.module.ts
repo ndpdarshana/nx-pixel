@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { TransactionsTableComponent } from './account-info/transactions-table/transactions-table.component';
 
 
 
@@ -24,7 +25,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     AccountInfoComponent,
     BalanceConsolComponent,
     PurchaseOrdersComponent,
-    InvoicesTableComponent
+    InvoicesTableComponent,
+    TransactionsTableComponent
   ],
   imports: [
     CommonModule,

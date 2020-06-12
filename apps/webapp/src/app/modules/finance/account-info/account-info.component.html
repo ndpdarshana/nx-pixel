@@ -1,1 +1,11 @@
-<p>account-info works!</p>
+<div fxLayout="column" fxLayoutAlign="space-between none" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="10px">
+    <button mat-raised-button color="primary" aria-label="Add new user">
+      Received
+    </button>
+    <button mat-raised-button color="accent" aria-label="Delete users">
+      Spent
+    </button>
+  </div>
+  <pixels-transactions-table [payments]="payments"></pixels-transactions-table>
+</div>
