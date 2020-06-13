@@ -9,7 +9,7 @@ import { DashboardComponent } from '../../modules/dashboard/dashboard.component'
 import { HrModule } from '../../modules/hr/hr.module';
 import { FinanceModule } from '../../modules/finance/finance.module';
 import { InventoryModule } from '../../modules/inventory/inventory.module';
-import { ProjectModule } from '../../modules/project/project.module';
+import { ProjectsModule } from '../../modules/projects/projects.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { ProjectModule } from '../../modules/project/project.module';
     HrModule,
     FinanceModule,
     InventoryModule,
-    ProjectModule
+    ProjectsModule
   ]
 })
 export class DefaultModule { }

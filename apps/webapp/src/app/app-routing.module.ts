@@ -8,7 +8,7 @@ import { MaintenanceComponent } from './modules/hr/administration/users/maintena
 import { TimecardsComponent } from './modules/hr/employees/timecards/timecards.component';
 import { InventoryComponent } from './modules/inventory/inventory.component';
 import { FinanceComponent } from './modules/finance/finance.component';
-import { ProjectComponent } from './modules/project/project.component';
+import { ProjectsComponent } from './modules/projects/projects.component';
 import { LeavesAbsencesComponent } from './modules/hr/employees/leaves-absences/leaves-absences.component';
 import { PaymentsComponent } from './modules/hr/employees/payments/payments.component';
 import { InventoryMgmtComponent } from './modules/inventory/inventory-mgmt/inventory-mgmt.component';
@@ -69,8 +69,8 @@ const routes: Routes = [{
       component: PurchaseOrdersComponent
     }]
   }, {
-    path: 'project',
-    component: ProjectComponent
+    path: 'projects',
+    component: ProjectsComponent
   }]
 }]
 

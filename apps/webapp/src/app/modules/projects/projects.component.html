@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <header fxLayout="row">
+    <h2>Project Management</h2>
+  </header>
+  
+  <div class="container" fxLayout="row" fxFlex=100 fxLayoutGap=20px>
+    <mat-card fxFlex="25" routerLink="/projects/inventoryMgmt">
+      Projects
+    </mat-card>
+    <mat-card fxFlex="25" routerLink="/projects/maintenance">
+      Maintenance
+    </mat-card>
+  </div>
+
+  <mat-divider></mat-divider>
+  <router-outlet></router-outlet>  
+</div>
