@@ -10,7 +10,9 @@
     <!-- Item Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header>Item Name</th>
-      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      <td mat-cell *matCellDef="let row">
+        <a [routerLink]="'../'+row.id">{{row.name}}</a>
+      </td>
     </ng-container>
 
     <!-- Category Column -->

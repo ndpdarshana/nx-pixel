@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/project-dashboard.component';
 
 
 
@@ -18,7 +20,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   declarations: [
     ProjectsComponent,
     ProjectMgmtComponent,
-    ProjectsTableComponent
+    ProjectsTableComponent,
+    ProjectDashboardComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatIconModule,
     MatTableModule,
     MatCheckboxModule,
+    MatProgressBarModule,
     RouterModule,
     FlexLayoutModule
   ], 
