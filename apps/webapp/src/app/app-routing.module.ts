@@ -16,6 +16,7 @@ import { InvoicesComponent } from './modules/finance/invoices/invoices.component
 import { AccountInfoComponent } from './modules/finance/account-info/account-info.component';
 import { BalanceConsolComponent } from './modules/finance/balance-consol/balance-consol.component';
 import { PurchaseOrdersComponent } from './modules/finance/purchase-orders/purchase-orders.component';
+import { ProjectMgmtComponent } from './modules/projects/project-mgmt/project-mgmt.component';
 
 const routes: Routes = [{
   path: '',
@@ -70,7 +71,11 @@ const routes: Routes = [{
     }]
   }, {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    children: [{
+      path: 'projectMgmt',
+      component: ProjectMgmtComponent
+    }]
   }]
 }]
 
