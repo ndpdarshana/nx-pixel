@@ -1,2 +1,9 @@
 <h2>Project: {{project.name}}</h2>
-<mat-progress-bar mode="determinate" [value]="project.compilation"></mat-progress-bar>
+<mat-progress-bar fxLayout="column" mode="determinate" [value]="project.compilation"></mat-progress-bar>
+<google-chart fxLayout="column" fxLayoutGap="10px"
+  [title]="gunttChart.title"
+  [type]="gunttChart.type"
+  [data]="gunttChart.data"
+  [columns]="gunttChart.columns"
+  [options]="gunttChart.options"
+></google-chart>

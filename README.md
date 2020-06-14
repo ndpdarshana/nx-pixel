@@ -15,3 +15,6 @@ nx serve
 http://localhost:4200
 `
 
+For creat charts: 
+https://github.com/FERNman/angular-google-charts
+

@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { GoogleChartsModule } from 'angular-google-charts';
+
 import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/project-dashboard.component';
 
 
@@ -33,7 +35,8 @@ import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/proj
     MatCheckboxModule,
     MatProgressBarModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    GoogleChartsModule
   ], 
   exports: [
     ProjectsComponent
