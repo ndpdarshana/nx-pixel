@@ -5,7 +5,7 @@ import { Project } from '../../../../models/project.model';
 @Component({
   selector: 'pixels-project-dashboard',
   templateUrl: './project-dashboard.component.html',
-  styleUrls: ['./project-dashboard.component.css']
+  styleUrls: ['./project-dashboard.component.scss']
 })
 export class ProjectDashboardComponent implements OnInit {
   projectId;
