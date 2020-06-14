@@ -12,7 +12,6 @@ interface Chart {
   options?: {};
 }
 
-
 @Component({
   selector: 'pixels-project-dashboard',
   templateUrl: './project-dashboard.component.html',
@@ -33,7 +32,7 @@ export class ProjectDashboardComponent implements OnInit {
       client: 'Lola Group ltd',
       startDate: '01/01/2020',
       endDate: '25/02/2021',
-      compilation: 60
+      compilation: 80
     }
 
     /**
@@ -67,7 +66,7 @@ export class ProjectDashboardComponent implements OnInit {
         ['Wallcover', 'Wall covering',
          null, new Date(2019, 6, 30), this.daysToMilliseconds(35), 75, 'Walls'],
         ['Finishing', 'Finishing work',
-         null, new Date(2019, 7, 30), this.daysToMilliseconds(20), 100, 'Walls, Roof']
+         null, new Date(2019, 7, 30), this.daysToMilliseconds(20), 80, 'Walls, Roof']
 
       ],
       options: {
