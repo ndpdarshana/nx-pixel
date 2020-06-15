@@ -18,6 +18,7 @@ import { BalanceConsolComponent } from './modules/finance/balance-consol/balance
 import { PurchaseOrdersComponent } from './modules/finance/purchase-orders/purchase-orders.component';
 import { ProjectMgmtComponent } from './modules/projects/project-mgmt/project-mgmt.component';
 import { ProjectDashboardComponent } from './modules/projects/project-mgmt/project-dashboard/project-dashboard.component';
+import { ProjectMaintenanceComponent } from './modules/projects/project-mgmt/project-maintenance/project-maintenance.component';
 
 const routes: Routes = [{
   path: '',
@@ -78,8 +79,11 @@ const routes: Routes = [{
       component: ProjectMgmtComponent,
       children: []
     }, {
-      path: ':id',
+      path: 'select/:id',
       component: ProjectDashboardComponent
+    }, {
+      path: 'maintenance',
+      component: ProjectMaintenanceComponent
     }]
   }]
 }]

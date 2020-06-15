@@ -13,9 +13,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion'
 import { GoogleChartsModule } from 'angular-google-charts';
 
 import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/project-dashboard.component';
+import { ProjectMaintenanceComponent } from './project-mgmt/project-maintenance/project-maintenance.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 
 
@@ -24,7 +28,8 @@ import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/proj
     ProjectsComponent,
     ProjectMgmtComponent,
     ProjectsTableComponent,
-    ProjectDashboardComponent
+    ProjectDashboardComponent,
+    ProjectMaintenanceComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +41,9 @@ import { ProjectDashboardComponent } from './project-mgmt/project-dashboard/proj
     MatCheckboxModule,
     MatProgressBarModule,
     MatGridListModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
     RouterModule,
     FlexLayoutModule,
     GoogleChartsModule
