@@ -21,7 +21,9 @@ export class ProjectDashboardComponent implements OnInit {
   projectId;
   project: Project;
   gunttChart: Chart;
-  gunttData: any[][]
+  lineChart: Chart;
+  createdVsCompletedChart: Chart;
+  taskSummaryPie: Chart;
 
   constructor(
     private route: ActivatedRoute
@@ -79,6 +81,77 @@ export class ProjectDashboardComponent implements OnInit {
             strokeWidth: 5
           }
         }
+      }
+    }
+
+    /**
+     * Line Chart
+     */
+    this.lineChart = {
+      title: 'Project economy',
+      type: ChartType.Line,
+      columns: [
+        {type: 'number', label: 'Month'},
+        {type: 'number', label: 'Income'},
+        {type: 'number', label: 'Expense'}
+      ],
+      data: [
+        [1, 5000, 8000],
+        [2, 2000, 3520],
+        [3, 10000, 15000],
+        [4, 8000, 6521],
+        [5, 10000, 8852],
+        [6, 7500, 6852]
+      ],
+      options: {
+        width: 350,
+        height: 150
+      }
+    }
+
+    /**
+     * Created Vs Completed Chart
+     */
+    this.createdVsCompletedChart = {
+      title: 'Created vs Completed Tasks',
+      type: ChartType.Line,
+      columns: [
+        {type: 'number', label: 'Month'},
+        {type: 'number', label: 'Created'},
+        {type: 'number', label: 'Completed'}
+      ],
+      data: [
+        [1, 4, 4],
+        [2, 9, 8],
+        [3, 16, 13],
+        [4, 25, 25],
+        [5, 39, 34],
+        [6, 52, 48]
+      ],
+      options: {
+        width: 700,
+        height: 300
+      }
+    }
+
+    /**
+     * Task summary Chart
+     */
+    this.taskSummaryPie = {
+      title: 'Task Summary',
+      type: ChartType.PieChart,
+      columns: [
+        {type: 'string', label: 'Task'},
+        {type: 'number', label: 'Hours'}
+      ],
+      data: [
+        ['On Schedule',     60],
+        ['Completed',      30],
+        ['Over due',  10],
+      ],
+      options: {
+        width: 700,
+        height: 300
       }
     }
   }

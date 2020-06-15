@@ -16,25 +16,49 @@
     </div>
     <div fxLayout="row" fxFlex=100 fxLayoutGap="20px">
       <mat-card fxFlex="25">
-        Project Expenditures
+        <h3>Project Expenditures</h3>
+        <h1>$68253.25</h1>
       </mat-card>
       <mat-card fxFlex="25">
-        Project Income
+        <h3>Project Income</h3>
+        <h1>$82000.00</h1>
       </mat-card>
       <mat-card fxFlex="25">
-        Line chart
-        Project economy
+        <google-chart
+          [title]="lineChart.title"
+          [type]="lineChart.type"
+          [data]="lineChart.data"
+          [columns]="lineChart.columns"
+          [options]="lineChart.options"
+        ></google-chart>
       </mat-card>
       <mat-card fxFlex="25">
-        Total hours of work
+        <h3>Total Hours</h3>
+        <h1>2304 Hours</h1>
       </mat-card>
     </div>
     <div fxLayout="column" fxFlex=100 fxLayoutGap="20px">
       <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>1</mat-grid-tile>
-        <mat-grid-tile>2</mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
+        <mat-grid-tile> 
+          <mat-grid-tile-header>Task created vs completed</mat-grid-tile-header>
+          <google-chart
+            [title]="createdVsCompletedChart.title"
+            [type]="createdVsCompletedChart.type"
+            [data]="createdVsCompletedChart.data"
+            [columns]="createdVsCompletedChart.columns"
+            [options]="createdVsCompletedChart.options"
+          ></google-chart>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-grid-tile-header>Task Summary</mat-grid-tile-header>
+          <google-chart
+            [title]="taskSummaryPie.title"
+            [type]="taskSummaryPie.type"
+            [data]="taskSummaryPie.data"
+            [columns]="taskSummaryPie.columns"
+            [options]="taskSummaryPie.options"
+          ></google-chart>
+        </mat-grid-tile>
       </mat-grid-list>
     </div>
   </div>
