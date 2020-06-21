@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { LeaveAbsence } from '../../../../../models/leave-absence.model';
 import { MatTableDataSource, MatTable } from '@angular/material/table';
 
@@ -7,7 +7,7 @@ import { MatTableDataSource, MatTable } from '@angular/material/table';
   templateUrl: './leaves-absences-table.component.html',
   styleUrls: ['./leaves-absences-table.component.css']
 })
-export class LeavesAbsencesTableComponent implements OnInit, AfterViewInit {
+export class LeavesAbsencesTableComponent implements OnInit, AfterViewInit, OnChanges {
   @ViewChild(MatTable) table: MatTable<LeaveAbsence>;
 
   dataSource: MatTableDataSource<LeaveAbsence>;
@@ -22,6 +22,12 @@ export class LeavesAbsencesTableComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     this.table.dataSource = this.dataSource;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.dataSource){
+      this.dataSource.data = this.leaves;  
+    }    
   }
 
 }

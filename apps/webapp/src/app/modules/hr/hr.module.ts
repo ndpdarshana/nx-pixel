@@ -34,6 +34,7 @@ import { PaymentsComponent } from './employees/payments/payments.component';
 import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves-absences-table/leaves-absences-table.component';
 import { PayslipsTableComponent } from './employees/payments/payslips-table/payslips-table.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { ApplyLeaveDialogBoxComponent } from './employees/leaves-absences/apply-leave-dialog-box/apply-leave-dialog-box.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     LeavesAbsencesComponent,
     PaymentsComponent,
     LeavesAbsencesTableComponent,
+    ApplyLeaveDialogBoxComponent,
     PayslipsTableComponent
   ],
   imports: [
