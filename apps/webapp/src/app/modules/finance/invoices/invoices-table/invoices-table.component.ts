@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Invoice } from '../../../../models/invoice.model';
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
@@ -8,7 +8,7 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
   templateUrl: './invoices-table.component.html',
   styleUrls: ['./invoices-table.component.scss']
 })
-export class InvoicesTableComponent implements OnInit, AfterViewInit {
+export class InvoicesTableComponent implements OnInit, AfterViewInit, OnChanges {
   selection = new SelectionModel<Invoice>(true, []);
   @ViewChild(MatTable) table: MatTable<Invoice>;
 
@@ -24,6 +24,12 @@ export class InvoicesTableComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     this.table.dataSource = this.dataSource;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.dataSource){
+      this.dataSource.data = this.invoices;  
+    }    
   }
 
   isAllSelected() {

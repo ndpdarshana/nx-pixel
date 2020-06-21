@@ -15,7 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { AddItemDialogBoxComponent } from './inventory-mgmt/add-item-dialog-box/apply-leave-dialog-box.component';
+import { AddItemDialogBoxComponent } from './inventory-mgmt/add-item-dialog-box/add-item-dialog-box.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { AddItemDialogBoxComponent } from './inventory-mgmt/add-item-dialog-box/
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     RouterModule,
     FlexLayoutModule,
     FormsModule

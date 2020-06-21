@@ -1,11 +1,10 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { LeaveAbsence } from '../../../../models/leave-absence.model';
 import { Inventory } from '../../../../models/inventory.model';
 
 @Component({
   selector: 'pixels-apply-leave-dialog-box',
-  templateUrl: './apply-leave-dialog-box.component.html'
+  templateUrl: './add-item-dialog-box.component.html'
 })
 export class AddItemDialogBoxComponent{
 

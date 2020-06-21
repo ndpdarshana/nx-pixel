@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Inventory } from '../../../models/inventory.model';
 
 import { MatDialog } from '@angular/material/dialog';
-import { AddItemDialogBoxComponent } from './add-item-dialog-box/apply-leave-dialog-box.component';
+import { AddItemDialogBoxComponent } from './add-item-dialog-box/add-item-dialog-box.component';
 
 @Component({
   selector: 'pixels-inventory-mgmt',
