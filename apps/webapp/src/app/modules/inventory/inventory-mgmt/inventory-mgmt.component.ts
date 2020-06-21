@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Inventory } from '../../../models/inventory.model';
 
+import { MatDialog } from '@angular/material/dialog';
+import { AddItemDialogBoxComponent } from './add-item-dialog-box/apply-leave-dialog-box.component';
+
 @Component({
   selector: 'pixels-inventory-mgmt',
   templateUrl: './inventory-mgmt.component.html',
@@ -8,8 +11,8 @@ import { Inventory } from '../../../models/inventory.model';
 })
 export class InventoryMgmtComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public dialog: MatDialog) { }
+  newItem: Inventory = null;
   inventory: Inventory[] = [
     {
       id: 1,
@@ -36,6 +39,26 @@ export class InventoryMgmtComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+  }
+
+  openAddItemDialog(): void{
+    this.newItem = new Inventory();
+    const dialogRef = this.dialog.open(AddItemDialogBoxComponent, {
+      width: '250px',
+      data: this.newItem
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // const timecard = {
+      //   id: 4, 
+      //   project: this.newTimecard.project, 
+      //   dateIn: this.datePipe.transform(new Date(), 'mediumDate'),
+      //   timeIn: this.datePipe.transform(new Date(), 'mediumTime'), 
+      //   timeOut: null,
+      //   comment: this.newTimecard.comment
+      // }
+      this.inventory = [...this.inventory, this.newItem];
+    });
   }
 
 }

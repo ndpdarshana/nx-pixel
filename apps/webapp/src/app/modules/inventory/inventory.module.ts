@@ -11,12 +11,18 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { AddItemDialogBoxComponent } from './inventory-mgmt/add-item-dialog-box/apply-leave-dialog-box.component';
 
 @NgModule({
   declarations: [
     InventoryComponent,
     InventoryMgmtComponent,
-    InventoryMgmtTableComponent
+    InventoryMgmtTableComponent,
+    AddItemDialogBoxComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +32,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatTableModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   exports: [
     InventoryComponent

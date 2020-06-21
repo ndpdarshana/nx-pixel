@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Inventory } from '../../../../models/inventory.model';
 import { SelectionModel } from '@angular/cdk/collections';
@@ -8,7 +8,7 @@ import { SelectionModel } from '@angular/cdk/collections';
   templateUrl: './inventory-mgmt-table.component.html',
   styleUrls: ['./inventory-mgmt-table.component.css']
 })
-export class InventoryMgmtTableComponent implements OnInit, AfterViewInit {
+export class InventoryMgmtTableComponent implements OnInit, AfterViewInit, OnChanges {
   selection = new SelectionModel<Inventory>(true, []);
   @ViewChild(MatTable) table: MatTable<Inventory>;
 
@@ -24,6 +24,12 @@ export class InventoryMgmtTableComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     this.table.dataSource = this.dataSource;
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.dataSource){
+      this.dataSource.data = this.inventory;  
+    }    
   }
 
   isAllSelected() {
