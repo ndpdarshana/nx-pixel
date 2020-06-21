@@ -12,6 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
@@ -32,6 +33,7 @@ import { LeavesAbsencesComponent } from './employees/leaves-absences/leaves-abse
 import { PaymentsComponent } from './employees/payments/payments.component';
 import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves-absences-table/leaves-absences-table.component';
 import { PayslipsTableComponent } from './employees/payments/payslips-table/payslips-table.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { PayslipsTableComponent } from './employees/payments/payslips-table/pays
     MatInputModule,
     MatFormFieldModule,
     MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FormsModule
   ],
   providers: [

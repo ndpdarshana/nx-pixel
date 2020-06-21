@@ -23,15 +23,15 @@ export class TimecardsComponent implements OnInit {
     {
       id: 1, 
       project: "proj 1", 
-      dateIn: this.datePipe.transform(new Date(), 'mediumDate'),
-      timeIn: this.datePipe.transform(new Date(), 'mediumTime'), 
-      timeOut: this.datePipe.transform(new Date(), 'mediumTime'),
+      dateIn: this.datePipe.transform(new Date().setHours(new Date().getHours() - 72), 'mediumDate'),
+      timeIn: this.datePipe.transform(new Date().setHours(new Date().getHours() - 2), 'mediumTime'), 
+      timeOut: this.datePipe.transform(new Date().setHours(new Date().getHours() + 6), 'mediumTime'),
       comment: "Test comment"
     },
     {
       id: 2, 
       project: "proj 2", 
-      dateIn: this.datePipe.transform(new Date(), 'mediumDate'),
+      dateIn: this.datePipe.transform(new Date().setHours(new Date().getHours() - 48), 'mediumDate'),
       timeIn: this.datePipe.transform(new Date(), 'mediumTime'), 
       timeOut: this.datePipe.transform(new Date(), 'mediumTime'),
       comment: "Test comment"
@@ -39,9 +39,9 @@ export class TimecardsComponent implements OnInit {
     {
       id: 3, 
       project: "proj 3", 
-      dateIn: this.datePipe.transform(new Date(), 'mediumDate'),
-      timeIn: this.datePipe.transform(new Date(), 'mediumTime'), 
-      timeOut: this.datePipe.transform(new Date(), 'mediumTime'),
+      dateIn: this.datePipe.transform(new Date().setHours(new Date().getHours() - 24), 'mediumDate'),
+      timeIn: this.datePipe.transform(new Date().setHours(new Date().getHours() - 3), 'mediumTime'), 
+      timeOut: this.datePipe.transform(new Date().setHours(new Date().getHours() + 6), 'mediumTime'),
       comment: "Test comment"
     }
   ]  
@@ -51,13 +51,22 @@ export class TimecardsComponent implements OnInit {
 
   openAddTimecardDialog(): void{
     this.newTimecard = new Timecard();
+    this.newTimecard.dateIn = this.datePipe.transform(new Date(), 'mediumDate');
     const dialogRef = this.dialog.open(AddTimecardDialogBoxComponent, {
       width: '250px',
       data: this.newTimecard
     });
 
     dialogRef.afterClosed().subscribe(result => {
-
+      const timecard = {
+        id: 4, 
+        project: this.newTimecard.project, 
+        dateIn: this.datePipe.transform(new Date(), 'mediumDate'),
+        timeIn: this.datePipe.transform(new Date(), 'mediumTime'), 
+        timeOut: null,
+        comment: this.newTimecard.comment
+      }
+      this.timecards = [...this.timecards, timecard];
     });
   }
 }
