@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@angular/cli": "9.1.0",
-    "@nrwl/workspace": "9.2.4",
+    "@nrwl/workspace": "9.4.5",
     "@types/node": "~8.9.4",
     "dotenv": "6.2.0",
     "ts-node": "~7.0.0",
