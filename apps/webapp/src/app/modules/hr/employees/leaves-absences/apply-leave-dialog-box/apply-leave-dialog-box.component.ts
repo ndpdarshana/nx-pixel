@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Timecard } from '../../../../../models/timecard.model';
 import { LeaveAbsence } from '../../../../../models/leave-absence.model';
 
 @Component({

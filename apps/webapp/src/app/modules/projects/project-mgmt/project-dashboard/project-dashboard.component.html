@@ -1,6 +1,9 @@
 <div fxLayout="column" fxLayoutGap="10px">
-  <header fxLayout="row">
+  <header fxLayout="row" fxLayoutGap="25">
     <h2>Project: {{project.name}}</h2>
+    <mat-icon class="edit-pen" color="primary" routerLink="/projects/maintenance">
+      edit
+    </mat-icon>
   </header>
   
   <div class="container" fxLayout="column" fxFlex=100 fxLayoutGap=20px>
