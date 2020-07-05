@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, AfterViewInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
 import { Timecard } from '../../../../../models/timecard.model';
 
@@ -7,7 +7,7 @@ import { Timecard } from '../../../../../models/timecard.model';
   templateUrl: './timecard-table.component.html',
   styleUrls: ['./timecard-table.component.scss']
 })
-export class TimecardTableComponent implements OnInit, AfterViewInit{
+export class TimecardTableComponent implements OnInit, AfterViewInit, OnChanges{
   @ViewChild(MatTable) table: MatTable<Timecard>;
 
   dataSource: MatTableDataSource<Timecard>;
@@ -24,4 +24,9 @@ export class TimecardTableComponent implements OnInit, AfterViewInit{
     this.table.dataSource = this.dataSource;
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if(this.dataSource){
+      this.dataSource.data = this.timecards;  
+    }    
+  }
 }

@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Add Timecard</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <!-- <mat-form-field>
+    <mat-label>Time In</mat-label>
+    <input matInput [(ngModel)]="data.timeIn">
+  </mat-form-field> -->
+  <mat-form-field appearance="fill">
+    <mat-label>Leave Type</mat-label>
+    <mat-select [(value)]="data.leaveType">
+      <mat-option *ngFor="let leave of leaveTypes" [value]="leave.name">
+        {{leave.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>  
+  <mat-form-field>
+    <mat-label>Note</mat-label>
+    <input matInput [(ngModel)]="data.note">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()" cdkFocusInitial>Cancel</button>
+  <button mat-raised-button [mat-dialog-close]="data" color="primary">Add</button>
+</div>

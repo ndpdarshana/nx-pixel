@@ -19,74 +19,78 @@ import { PurchaseOrdersComponent } from './modules/finance/purchase-orders/purch
 import { ProjectMgmtComponent } from './modules/projects/project-mgmt/project-mgmt.component';
 import { ProjectDashboardComponent } from './modules/projects/project-mgmt/project-dashboard/project-dashboard.component';
 import { ProjectMaintenanceComponent } from './modules/projects/project-mgmt/project-maintenance/project-maintenance.component';
+import { LoginComponent } from './layouts/login/login.component';
 
 const routes: Routes = [{
-  path: '',
-  component: DefaultComponent,
-  children: [{
+    path: 'login',
+    component: LoginComponent
+  }, {
     path: '',
-    component: DashboardComponent
-  }, {
-    path: 'hr',
-    component: HrComponent,
+    component: DefaultComponent,
     children: [{
-      path: 'admin/users',
-      component: UsersComponent
+      path: '',
+      component: DashboardComponent
     }, {
-      path: 'admin/maintenance',
-      component: MaintenanceComponent
+      path: 'hr',
+      component: HrComponent,
+      children: [{
+        path: 'admin/users',
+        component: UsersComponent
+      }, {
+        path: 'admin/maintenance',
+        component: MaintenanceComponent
+      }, {
+        path: 'employee/timecard',
+        component: TimecardsComponent
+      }, {
+        path: 'employee/leaves',
+        component: LeavesAbsencesComponent
+      }, {
+        path: 'employee/payments',
+        component: PaymentsComponent
+      }]
     }, {
-      path: 'employee/timecard',
-      component: TimecardsComponent
+      path: 'inventory',
+      component: InventoryComponent,
+      children: [{
+        path: 'inventoryMgmt',
+        component: InventoryMgmtComponent
+      }, {
+        path: 'maintenance',
+        component: MaintenanceComponent
+      }]
     }, {
-      path: 'employee/leaves',
-      component: LeavesAbsencesComponent
+      path: 'finance',
+      component: FinanceComponent,
+      children: [{
+        path: 'invoices',
+        component: InvoicesComponent
+      }, {
+        path: 'accountInfo',
+        component: AccountInfoComponent
+      }, {
+        path: 'balanceConsol',
+        component: BalanceConsolComponent
+      }, {
+        path: 'purchaseOrders',
+        component: PurchaseOrdersComponent
+      }]
     }, {
-      path: 'employee/payments',
-      component: PaymentsComponent
-    }]
-  }, {
-    path: 'inventory',
-    component: InventoryComponent,
-    children: [{
-      path: 'inventoryMgmt',
-      component: InventoryMgmtComponent
-    }, {
-      path: 'maintenance',
-      component: MaintenanceComponent
-    }]
-  }, {
-    path: 'finance',
-    component: FinanceComponent,
-    children: [{
-      path: 'invoices',
-      component: InvoicesComponent
-    }, {
-      path: 'accountInfo',
-      component: AccountInfoComponent
-    }, {
-      path: 'balanceConsol',
-      component: BalanceConsolComponent
-    }, {
-      path: 'purchaseOrders',
-      component: PurchaseOrdersComponent
-    }]
-  }, {
-    path: 'projects',
-    component: ProjectsComponent,
-    children: [{
-      path: 'projectMgmt',
-      component: ProjectMgmtComponent,
-      children: []
-    }, {
-      path: 'select/:id',
-      component: ProjectDashboardComponent
-    }, {
-      path: 'maintenance',
-      component: ProjectMaintenanceComponent
+      path: 'projects',
+      component: ProjectsComponent,
+      children: [{
+        path: 'projectMgmt',
+        component: ProjectMgmtComponent,
+        children: []
+      }, {
+        path: 'select/:id',
+        component: ProjectDashboardComponent
+      }, {
+        path: 'maintenance',
+        component: ProjectMaintenanceComponent
+      }]
     }]
   }]
-}]
 
 @NgModule({
   declarations: [],

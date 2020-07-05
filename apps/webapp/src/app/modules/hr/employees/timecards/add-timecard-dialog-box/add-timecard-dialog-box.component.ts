@@ -10,6 +10,7 @@ export class AddTimecardDialogBoxComponent{
 
   constructor(public dialogRef: MatDialogRef<AddTimecardDialogBoxComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Timecard) { }
+  
 
   onNoClick(): void {
     this.dialogRef.close();

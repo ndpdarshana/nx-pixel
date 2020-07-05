@@ -15,6 +15,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { TransactionsTableComponent } from './account-info/transactions-table/transactions-table.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { AddInvoiceDialogBoxComponent } from './invoices/add-invoice-dialog-box/add-invoice-dialog-box.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
@@ -26,7 +33,8 @@ import { TransactionsTableComponent } from './account-info/transactions-table/tr
     BalanceConsolComponent,
     PurchaseOrdersComponent,
     InvoicesTableComponent,
-    TransactionsTableComponent
+    TransactionsTableComponent,
+    AddInvoiceDialogBoxComponent
   ],
   imports: [
     CommonModule,
@@ -36,8 +44,14 @@ import { TransactionsTableComponent } from './account-info/transactions-table/tr
     MatIconModule,
     MatTableModule,
     MatCheckboxModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
   exports: [
     FinanceComponent

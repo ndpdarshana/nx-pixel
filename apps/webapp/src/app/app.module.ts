@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginModule } from './layouts/login/login.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     BrowserModule, 
     BrowserAnimationsModule,
     DefaultModule,
+    LoginModule,
     AppRoutingModule,
     FlexLayoutModule
   ],
