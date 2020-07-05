@@ -10,10 +10,14 @@
     <mat-label>Time In</mat-label>
     <input matInput [(ngModel)]="data.timeIn">
   </mat-form-field> -->
-  <mat-form-field>
+  <mat-form-field appearance="fill">
     <mat-label>Leave Type</mat-label>
-    <input matInput [(ngModel)]="data.leaveType">
-  </mat-form-field>
+    <mat-select [(value)]="data.leaveType">
+      <mat-option *ngFor="let leave of leaveTypes" [value]="leave.name">
+        {{leave.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>  
   <mat-form-field>
     <mat-label>Note</mat-label>
     <input matInput [(ngModel)]="data.note">

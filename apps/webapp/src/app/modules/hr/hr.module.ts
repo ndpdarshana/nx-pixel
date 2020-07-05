@@ -35,6 +35,7 @@ import { LeavesAbsencesTableComponent } from './employees/leaves-absences/leaves
 import { PayslipsTableComponent } from './employees/payments/payslips-table/payslips-table.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ApplyLeaveDialogBoxComponent } from './employees/leaves-absences/apply-leave-dialog-box/apply-leave-dialog-box.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { ApplyLeaveDialogBoxComponent } from './employees/leaves-absences/apply-
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
     FormsModule
   ],
   providers: [
