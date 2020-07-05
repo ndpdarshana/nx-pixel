@@ -14,13 +14,13 @@ export class UsersResolver {
     return 'Hello World';
   }
 
-  // @Query(() => [CreateUserDto])
-  // async users() {
-  //   return this.usersService.findAll();
-  // }
+  @Query(() => [CreateUserDto])
+  async users() {
+    return await this.usersService.findAll();
+  }
 
-  // @Mutation(() => String)
-  // async createUser(@Args('input') input: InputUser) {
-  //   return this.usersService.create(input);
-  // }
+  @Mutation(() => CreateUserDto)
+  async createUser(@Args('input') input: InputUser) {
+    return this.usersService.create(input);
+  }
 }
